@@ -402,6 +402,19 @@
             font-family: 'Nunito', sans-serif;
         }
 
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .image {
+            display: flex;
+            justify-content: center
+        }
+
+        .uni {
+            width: 40%
+        }
     </style>
 </head>
 
@@ -410,11 +423,15 @@
         @include('navbar')
     </header>
     <main>
-        <div class="title flex justify-center">
+        <div class="title text-center">
             <h1>{{ $title }}</h1>
-        </div>
+            <div class="image">
+                <div class="uni">
+                    <img src="{{ $uniImage }}" alt="{{ $title }}">
+                </div>
+            </div>
+
     </main>
-    </div>
 </body>
 
 </html>
