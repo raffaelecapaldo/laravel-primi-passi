@@ -47,7 +47,12 @@ Route::get('/testpage', function () {
         $counter++;
     }
     $data = [
-        'numbers' => $numbers
+        'numbers' => $numbers,
+        'links' => [
+            'home' => route('home'),
+            'uni' => route('uni'),
+            'testpage' => route('testpage')
+        ]
     ];
     return view('testpage', $data);
 
