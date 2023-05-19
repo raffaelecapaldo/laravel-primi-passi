@@ -19,6 +19,7 @@ Route::get('/', function () {
         'links' => [
             'home' => route('home'),
             'uni' => route('uni'),
+            'testpage' => route('testpage')
         ]
     ];
     return view('home', $data);
@@ -31,8 +32,25 @@ Route::get('/uni', function () {
         'links' => [
             'home' => route('home'),
             'uni' => route('uni'),
+            'testpage' => route('testpage')
         ]
     ];
     return view('unicat', $data);
 })->name('uni');
 
+Route::get('/testpage', function () {
+    $numbers = [];
+    $counter = 1;
+    while ($counter <= 100) {
+        $number = rand(1, 500);
+        array_push($numbers, $number);
+        $counter++;
+    }
+    $data = [
+        'numbers' => $numbers
+    ];
+    return view('testpage', $data);
+
+
+
+})->name('testpage');
