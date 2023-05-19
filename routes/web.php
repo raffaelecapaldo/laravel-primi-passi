@@ -32,7 +32,9 @@ Route::get('/uni', function () {
         'links' => [
             'home' => route('home'),
             'uni' => route('uni'),
-            'testpage' => route('testpage')
+            'testpage' => route('testpage'),
+            'unilol' => route('unilol')
+
         ]
     ];
     return view('unicat', $data);
@@ -59,3 +61,16 @@ Route::get('/testpage', function () {
 
 
 })->name('testpage');
+
+Route::get('/uni.jpg', function () {
+    $data = [
+        'title' => 'Uni the Cat',
+        'uniImage' => 'https://pbs.twimg.com/media/FpuxcfiX0AAuUA4.jpg',
+        'links' => [
+            'home' => route('home'),
+            'uni' => route('uni'),
+            'testpage' => route('testpage'),
+        ]
+    ];
+    return view('imagerandom', $data);
+})->name('unilol');

@@ -427,7 +427,7 @@
             <h1>{{ $title }}</h1>
             <div class="image">
                 <div class="uni">
-                    <img src="{{ $uniImage }}" alt="{{ $title }}">
+                    <img src="{{ $links['unilol'] }}" alt="{{ $title }}">
                 </div>
             </div>
 
